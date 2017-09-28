@@ -1,5 +1,7 @@
 # PHP Event Manager
 
+[![Build Status](https://travis-ci.org/benliev/event.svg?branch=master)](https://travis-ci.org/benliev/event)
+
 Implementation of [PSR-14 Event Manager](https://github.com/php-fig/fig-standards/blob/master/proposed/event-manager.md).
 
 ## Requirements
