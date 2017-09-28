@@ -38,10 +38,6 @@ class EventManagerTest extends TestCase
         return new Event($name);
     }
 
-    /**
-     * @covers EventManager::attach()
-     * @covers EventManager::trigger()
-     */
     public function testTriggerEventWithEventObject()
     {
         $event = $this->makeEvent();
@@ -54,8 +50,6 @@ class EventManagerTest extends TestCase
 
     /**
      * Test trigger event with not event, trigger method created it
-     * @covers EventManager::attach()
-     * @covers EventManager::trigger()
      */
     public function testTriggerEventWithoutEventObject()
     {
@@ -66,10 +60,6 @@ class EventManagerTest extends TestCase
         $this->manager->trigger('default.index');
     }
 
-    /**
-     * @covers EventManager::attach()
-     * @covers EventManager::trigger()
-     */
     public function testTriggerMultipleEvent()
     {
         $event = $this->makeEvent();
@@ -83,10 +73,6 @@ class EventManagerTest extends TestCase
         $this->manager->trigger($this->makeEvent());
     }
 
-    /**
-     * @covers EventManager::attach()
-     * @covers EventManager::trigger()
-     */
     public function testTriggerOrderWithPriority()
     {
         $event = $this->makeEvent();
@@ -103,10 +89,6 @@ class EventManagerTest extends TestCase
         $this->manager->trigger($this->makeEvent());
     }
 
-    /**
-     * @covers EventManager::attach()
-     * @covers EventManager::detach()
-     */
     public function testDetachListener()
     {
         $event = $this->makeEvent();
@@ -116,11 +98,6 @@ class EventManagerTest extends TestCase
         $this->assertTrue($this->manager->detach($event->getName(), $callback));
     }
 
-    /**
-     * @covers EventManager::attach()
-     * @covers EventManager::clearListeners()
-     * @covers EventManager::trigger()
-     */
     public function testClearListeners()
     {
         $event = $this->makeEvent();
@@ -138,10 +115,6 @@ class EventManagerTest extends TestCase
         $this->manager->trigger($event);
     }
 
-    /**
-     * @covers EventManager::attach()
-     * @covers EventManager::trigger()
-     */
     public function testTriggerWithStopPropagation()
     {
         $event = $this->makeEvent();
@@ -158,19 +131,12 @@ class EventManagerTest extends TestCase
         $this->manager->trigger($event);
     }
 
-    /**
-     * @covers EventManager::detach()
-     */
     public function testDetachUnknowEvent()
     {
         $this->assertFalse($this->manager->detach('toto', function () {
         }));
     }
 
-    /**
-     * @covers EventManager::attach()
-     * @covers EventManager::detach()
-     */
     public function testDetachUnknowCallback()
     {
         $event = $this->makeEvent();
