@@ -1,5 +1,5 @@
 {
-  "name": "benliev/event",
+  "name": "benvens/event",
   "description": "PSR-14 event manager implementation library for PHP",
   "type": "library",
   "keywords": ["event", "event manager", "psr", "psr-14", "benliev"],
@@ -7,7 +7,7 @@
   "license": "MIT",
   "authors": [
     {
-      "name": "benliev",
+      "name": "benvens",
       "email": "l.benjamin185@gmail.com"
     }
   ],
