@@ -10,7 +10,7 @@ PHP >= 7.1
 
 ## Installation
 
-composer require benliev/event
+composer require benvens/event
 
 ## Usage example
 
