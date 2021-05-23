@@ -1,13 +1,13 @@
 <?php
 
-namespace benliev\Event;
+namespace benvens\Event;
 
-use benliev\Event\Interfaces\EventInterface;
+use benvens\Event\Interfaces\EventInterface;
 
 /**
  * Representation of an event
  * @author Lievens Benjamin <l.benjamin185@gmail.com>
- * @package benliev\Event
+ * @package benvens\Event
  */
 class Event implements EventInterface
 {

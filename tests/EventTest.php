@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use benliev\Event\Event;
+use benvens\Event\Event;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -19,7 +19,7 @@ class EventTest extends TestCase
     /**
      * @inheritdoc
      */
-    protected function setUp()
+    public function setUp() : void
     {
         parent::setUp();
         $this->event = new Event('demo', $this, ['invoker'=>$this], false);

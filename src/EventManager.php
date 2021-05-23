@@ -1,13 +1,13 @@
 <?php
 
-namespace benliev\Event;
+namespace benvens\Event;
 
-use benliev\Event\Interfaces\EventManagerInterface;
+use benvens\Event\Interfaces\EventManagerInterface;
 
 /**
  * Class EventManager
  * @author Lievens Benjamin <l.benjamin185@gmail.com>
- * @package benliev\Event
+ * @package benvens\Event
  */
 class EventManager implements EventManagerInterface
 {

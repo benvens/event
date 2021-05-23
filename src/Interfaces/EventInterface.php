@@ -1,6 +1,6 @@
 <?php
 
-namespace benliev\Event\Interfaces;
+namespace benvens\Event\Interfaces;
 
 /**
  * Representation of an event

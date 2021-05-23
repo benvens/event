@@ -2,10 +2,10 @@
 
 namespace Tests;
 
-use benliev\Event\Event;
-use benliev\Event\EventManager;
-use benliev\Event\Interfaces\EventInterface;
-use benliev\Event\Interfaces\EventManagerInterface;
+use benvens\Event\Event;
+use benvens\Event\EventManager;
+use benvens\Event\Interfaces\EventInterface;
+use benvens\Event\Interfaces\EventManagerInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -23,7 +23,7 @@ class EventManagerTest extends TestCase
     /**
      * @inheritdoc
      */
-    public function setUp()
+    public function setUp(): void
     {
         $this->manager = new EventManager();
     }
@@ -109,7 +109,7 @@ class EventManagerTest extends TestCase
             echo '2';
         });
         $this->manager->clearListeners($event2->getName());
-        $this->expectOutputString(null);
+        $this->expectOutputString('');
         $this->manager->trigger($event2);
         $this->expectOutputString('1');
         $this->manager->trigger($event);
